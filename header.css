@@ -1,0 +1,59 @@
+body {
+  height: fit-content;
+  background: 
+  linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  font-family: "Montserrat", sans-serif;
+
+}
+.Main-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+h4 {
+  margin-left: 40px;
+  color: white;
+}
+.Main-head div {
+  margin-right: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Main-head div a {
+  margin-right: 25px;
+  color: rgb(210, 210, 210);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s, opacity 0.2s;
+}
+.Main-head div a:hover {
+  color: #ffffff;
+}
+.Main-head div a:active {
+  opacity: 0.7;
+}
+.Main-head button {
+  background-color: transparent;
+  color: rgb(227, 227, 227);
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 4px;
+  padding: 7px 17px;
+  cursor: pointer;
+  transition: background-color ease 0.15s color ease 0.15 opacity ease 0.15;
+}
+.Main-head button:hover {
+ background-color: white;
+ color: #3b82f6;
+}
+.Main-head button:active {
+  opacity: 0.6;
+}

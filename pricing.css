@@ -1,0 +1,9 @@
+.Head-section {
+  display: flex;
+}
+.left-section, h3 {
+  display: flex;
+}
+.right-section {
+  display: flex;
+}
