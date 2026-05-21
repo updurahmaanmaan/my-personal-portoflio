@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abdirahman Hassan — Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="portfolio.css">
+  
+</head>
+<body>
+
+  <!-- ══════════════ SIDEBAR ══════════════ -->
+  <aside class="sidebar">
+    <div class="sb-logo">
+      <div class="sb-initials">AH</div>
+      <div class="sb-name">Abdirahman Hassan</div>
+      <div class="sb-role">Frontend Developer</div>
+    </div>
+
+    <nav>
+      <ul class="sb-nav">
+        <li><button class="active" onclick="showPage('home',this)"><span class="ndot"></span>Home</button></li>
+        <li><button onclick="showPage('skills',this)"><span class="ndot"></span>Skills</button></li>
+        <li><button onclick="showPage('projects',this)"><span class="ndot"></span>Projects</button></li>
+        <li><button onclick="showPage('about',this)"><span class="ndot"></span>About</button></li>
+        <li><button onclick="showPage('contact',this)"><span class="ndot"></span>Contact</button></li>
+      </ul>
+    </nav>
+
+    <div class="sb-bottom">
+      <div class="avail-badge">
+        <div class="avail-dot"></div>
+        <span class="avail-text">Available for work</span>
+      </div>
+      <div class="sb-contact">
+        updurahmaanmaan@gmail.com<br>
+        +252 63 6244985
+      </div>
+    </div>
+  </aside>
+
+  <!-- ══════════════ MAIN ══════════════ -->
+  <main class="main">
+
+    <!-- ══════ HOME ══════ -->
+    <div id="page-home" class="page active">
+      <section style="min-height:100vh;background:var(--navy2);display:flex;align-items:center;padding:80px 64px;position:relative;overflow:hidden;border-bottom:1px solid var(--border);">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(20,184,166,0.12) 1px,transparent 1px);background-size:36px 36px;pointer-events:none;"></div>
+        <div class="hero-inner">
+          <div class="hero-eyebrow">Hargeisa, Somalia</div>
+          <h1 class="hero-name">ABDI<br>RAHMAN<br><span class="teal">HASSAN</span></h1>
+          <p class="hero-role">Frontend Developer &amp; AI Enthusiast</p>
+          <div class="hero-pills">
+            <span class="pill accent">Claude 101 ✦ Certified</span>
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Form Validation</span>
+            <span class="pill">Responsive Design</span>
+            <span class="pill">AI Tools</span>
+            <span class="pill">Problem Solving</span>
+          </div>
+          <div class="hero-btns">
+            <button class="btn-primary" onclick="showPage('projects',document.querySelector('.sb-nav button:nth-child(3)'))">View Projects →</button>
+            <button class="btn-ghost" onclick="showPage('contact',document.querySelector('.sb-nav button:nth-child(5)'))">Get in Touch</button>
+          </div>
+        </div>
+      </section>
+      <div class="footer">
+        <span class="footer-copy">© 2026 Abdirahman Hassan. All rights reserved.</span>
+        <span class="footer-made">Built by <span>Abdirahman Hassan</span></span>
+      </div>
+    </div>
+
+    <!-- ══════ SKILLS ══════ -->
+    <div id="page-skills" class="page">
+      <div class="skills-content" style="padding-top:80px;">
+        <div class="skills-grid">
+          <div class="skill-card reveal rd1">
+            <div class="skill-icon">⬡</div>
+            <div class="skill-name">Frontend Dev</div>
+            <div class="skill-desc">Building real interactive web pages from scratch — clean layouts, smooth forms, and polished UI that works in the browser.</div>
+            <div class="skill-tags">
+              <span class="stag">HTML</span><span class="stag">CSS</span><span class="stag">JavaScript</span><span class="stag">Responsive</span>
+            </div>
+          </div>
+          <div class="skill-card reveal rd2">
+            <div class="skill-icon">🤖</div>
+            <div class="skill-name">AI Tools</div>
+            <div class="skill-desc">Certified in Claude 101 by Anthropic. Uses AI to accelerate development, generate ideas, debug code, and build smarter.</div>
+            <div class="skill-tags">
+              <span class="stag cert">Claude 101 ✦</span><span class="stag">Anthropic</span><span class="stag">AI-assisted Dev</span>
+            </div>
+          </div>
+          <div class="skill-card reveal rd3">
+            <div class="skill-icon">◇</div>
+            <div class="skill-name">Problem Solving</div>
+            <div class="skill-desc">Breaking complex challenges into clean solutions — debugging bugs, fixing structural issues, building multi-file projects.</div>
+            <div class="skill-tags">
+              <span class="stag">Debugging</span><span class="stag">Logic</span><span class="stag">Clean Code</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress bars -->
+        <div class="bar-grid reveal" id="bar-grid" style="margin-top:40px;">
+          <div class="bar-item">
+            <div class="bar-label"><span class="bar-name">HTML</span><span class="bar-pct">90%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="90"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label"><span class="bar-name">CSS</span><span class="bar-pct">85%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="85"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label"><span class="bar-name">JavaScript</span><span class="bar-pct">75%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="75"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label"><span class="bar-name">AI Tools</span><span class="bar-pct">88%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="88"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label"><span class="bar-name">Problem Solving</span><span class="bar-pct">82%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="82"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label"><span class="bar-name">Responsive Design</span><span class="bar-pct">80%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="80"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Roles -->
+      <div class="roles-section">
+        <div class="roles-grid">
+          <div class="role-card reveal rd1">
+            <div class="role-icon">💻</div>
+            <div class="role-title">Frontend Developer</div>
+            <div class="role-desc">I design and build web interfaces from scratch using HTML, CSS, and JavaScript — creating layouts, forms, animations, and interactive experiences that look great and work perfectly.</div>
+          </div>
+          <div class="role-card reveal rd2">
+            <div class="role-icon">🤖</div>
+            <div class="role-title">AI-Powered Developer</div>
+            <div class="role-desc">I use AI tools like Claude to write better code faster, debug smarter, and find creative solutions. Certified in Claude 101 by Anthropic — I know how to work with AI effectively.</div>
+          </div>
+          <div class="role-card reveal rd3">
+            <div class="role-icon">🔍</div>
+            <div class="role-title">Problem Solver</div>
+            <div class="role-desc">When something breaks or a project needs structure, I dig in and fix it. From nested event listener bugs to missing stylesheets — I find the issue and resolve it cleanly.</div>
+          </div>
+          <div class="role-card reveal rd4">
+            <div class="role-icon">📐</div>
+            <div class="role-title">UI Builder</div>
+            <div class="role-desc">I translate designs into pixel-accurate, responsive web pages — handling layout, spacing, color, typography, and micro-interactions to make interfaces feel polished and alive.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span class="footer-copy">© 2026 Abdirahman Hassan. All rights reserved.</span>
+        <span class="footer-made">Built by <span>Abdirahman Hassan</span></span>
+      </div>
+    </div>
+
+    <!-- ══════ PROJECTS ══════ -->
+    <div id="page-projects" class="page">
+      <div class="projects-content" style="padding-top:80px;">
+        <div class="projects-grid">
+          <div class="proj-card featured reveal">
+            <div class="proj-visual pv-1">🏨</div>
+            <div class="proj-body">
+              <div class="proj-num">// 001 — Featured</div>
+              <div class="proj-title">Brothers Landing Page</div>
+              <div class="proj-desc">A full hotel &amp; restaurant landing page with a fixed glassmorphism nav, hero section, and a fully working sign-up form. Features real-time inline validation on name, email, and password — with error messages, success feedback, and redirect on completion.</div>
+              <div class="proj-footer">
+                <div class="proj-stack"><span class="stag">HTML</span><span class="stag">CSS</span><span class="stag">JavaScript</span><span class="stag">Form Validation</span></div>
+                <a href="Index3.html" class="proj-link" target="_blank">View project <span class="arrow">↗</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-card reveal rd1">
+            <div class="proj-visual pv-2">🔐</div>
+            <div class="proj-body">
+              <div class="proj-num">// 002</div>
+              <div class="proj-title">Mockplus Login Form</div>
+              <div class="proj-desc">A polished login UI with animated shake on errors, real-time email &amp; password validation, success toast notifications, and Google / Lark social sign-in buttons with pulse effects.</div>
+              <div class="proj-footer">
+                <div class="proj-stack"><span class="stag">HTML</span><span class="stag">CSS</span><span class="stag">JavaScript</span></div>
+                <a href="Index.html" class="proj-link" target="_blank">View <span class="arrow">↗</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="proj-card reveal rd2">
+            <div class="proj-visual pv-3">🎨</div>
+            <div class="proj-body">
+              <div class="proj-num">// 003</div>
+              <div class="proj-title">This Portfolio</div>
+              <div class="proj-desc">A mixed-design portfolio — split sidebar layout, teal &amp; navy theme, skill pills, progress bars, scroll reveal animations, and full page navigation. Single HTML file, zero dependencies.</div>
+              <div class="proj-footer">
+                <div class="proj-stack"><span class="stag">HTML</span><span class="stag">CSS</span><span class="stag">JavaScript</span></div>
+                <span class="proj-link" style="cursor:default;">You're here ✦</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <span class="footer-copy">© 2026 Abdirahman Hassan. All rights reserved.</span>
+        <span class="footer-made">Built by <span>Abdirahman Hassan</span></span>
+      </div>
+    </div>
+
+    <!-- ══════ ABOUT ══════ -->
+    <div id="page-about" class="page">
+      <div class="about-content" style="padding-top:80px;">
+        <div>
+          <p class="about-text reveal">I'm <strong>Abdirahman Hassan</strong>, a self-taught frontend developer and high school student from <strong>Hargeisa, Somalia</strong>. I started building real web projects from the ground up — no shortcuts, just curiosity, consistency, and code.</p>
+          <p class="about-text reveal">I hold a <strong>Claude 101 certificate from Anthropic</strong>, issued May 2026, and actively use AI tools to accelerate my development and build smarter. I care about <strong>clean, working code</strong> and push my skills further every day.</p>
+          <p class="about-text reveal">My goal is to keep growing as a developer — taking on harder projects, learning new technologies, and eventually building products that make a real difference.</p>
+          <div class="about-pills reveal">
+            <span class="pill">HTML / CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Form Validation</span>
+            <span class="pill">Responsive Layout</span>
+            <span class="pill accent">Claude 101 ✦</span>
+            <span class="pill">Problem Solving</span>
+          </div>
+        </div>
+        <div>
+          <div class="cert-badge reveal">
+            <div class="cert-icon">🏅</div>
+            <div>
+              <div class="cert-name">Claude 101</div>
+              <div class="cert-meta">Anthropic · Issued May 18, 2026<br>Certificate No: o5fydz8xmovw</div>
+            </div>
+          </div>
+          <div class="timeline" style="margin-top:16px;">
+            <div class="tl-item reveal rd1">
+              <div class="tl-period">2025 — Present</div>
+              <div class="tl-role">Frontend Developer</div>
+              <div class="tl-place">Self-taught — Building real projects</div>
+            </div>
+            <div class="tl-item reveal rd2">
+              <div class="tl-period">May 18, 2026</div>
+              <div class="tl-role">Claude 101 Certificate</div>
+              <div class="tl-place">Anthropic — AI tools &amp; applications</div>
+            </div>
+            <div class="tl-item reveal rd3">
+              <div class="tl-period">Present</div>
+              <div class="tl-role">High School Student</div>
+              <div class="tl-place">Hargeisa, Somalia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <span class="footer-copy">© 2026 Abdirahman Hassan. All rights reserved.</span>
+        <span class="footer-made">Built by <span>Abdirahman Hassan</span></span>
+      </div>
+    </div>
+
+    <!-- ══════ CONTACT ══════ -->
+    <div id="page-contact" class="page">
+      <div class="contact-content" style="padding-top:80px;flex:unset;">
+        <div class="contact-left reveal">
+          <a href="mailto:updurahmaanmaan@gmail.com" class="contact-card">
+            <div class="cc-icon">✉️</div>
+            <div class="cc-info">
+              <div class="cc-label">Email</div>
+              <div class="cc-value">updurahmaanmaan@gmail.com</div>
+              <div class="cc-sub">Click to send an email</div>
+            </div>
+            <div class="cc-arrow">↗</div>
+          </a>
+          <a href="https://wa.me/252636244985" target="_blank" class="contact-card">
+            <div class="cc-icon">💬</div>
+            <div class="cc-info">
+              <div class="cc-label">WhatsApp</div>
+              <div class="cc-value">+252 63 6244985</div>
+              <div class="cc-sub">Click to open WhatsApp</div>
+            </div>
+            <div class="cc-arrow">↗</div>
+          </a>
+        </div>
+        <div class="contact-right reveal rd2">
+          <div class="contact-info-block">
+            <div class="info-row">
+              <div class="info-icon">📍</div>
+              <div>
+                <div class="info-label">Location</div>
+                <div class="info-val">Hargeisa, Somalia</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">🕐</div>
+              <div>
+                <div class="info-label">Response time</div>
+                <div class="info-val">Usually within 24 hours</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">💼</div>
+              <div>
+                <div class="info-label">Status</div>
+                <div class="info-val" style="color:var(--teal-lt);">✦ Available for work</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-icon">🏅</div>
+              <div>
+                <div class="info-label">Certificate</div>
+                <div class="info-val">Claude 101 — Anthropic (May 2026)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <span class="footer-copy">© 2026 Abdirahman Hassan. All rights reserved.</span>
+        <span class="footer-made">Built by <span>Abdirahman Hassan</span></span>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="portfolio.js">
+    // ── Page switcher
+   
+  </script>
+</body>
+</html>
